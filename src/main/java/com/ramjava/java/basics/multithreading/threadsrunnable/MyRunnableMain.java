@@ -1,4 +1,4 @@
-package com.ramjava.java.basics.Multithreading.threadsrunnable;
+package com.ramjava.java.basics.multithreading.threadsrunnable;
 
 // Sequential - Work on 1 task at a time
 // Concurrent - Working on multiple tasks at the same time. Example, Youtube is loading a video is 1 task, loading a comment is another task

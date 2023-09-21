@@ -1,4 +1,4 @@
-package com.ramjava.java.basics.Multithreading.threadsrunnable;
+package com.ramjava.java.basics.multithreading.threadsrunnable;
 
 public class MyRunnable implements Runnable {
     private String objName;

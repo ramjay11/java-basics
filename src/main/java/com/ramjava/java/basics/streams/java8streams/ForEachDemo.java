@@ -16,8 +16,10 @@ public class ForEachDemo {
         for (String s : list) {
             System.out.println(s);
         }
+        System.out.println("----------------------------");
         // stream api
         list.stream().forEach(t -> System.out.println(t));
+        System.out.println("-------------------------");
         // Maps
         Map<Integer, String> map = new HashMap<>();
         map.put(1, "a");

@@ -1,4 +1,4 @@
-package com.ramjava.java.basics.Multithreading;
+package com.ramjava.java.basics.multithreading;
 
 // Extending Thread makes it multithreading
 public class MultithreadThing extends Thread {

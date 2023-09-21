@@ -1,4 +1,4 @@
-package com.ramjava.java.basics.Multithreading;
+package com.ramjava.java.basics.multithreading;
 
 public class Multithreading {
     public static void main(String[] args) {

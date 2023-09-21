@@ -9,7 +9,8 @@ public class QAMain {
     *  4. CompletableFuture
     *  5. Java DateTime API
     * 2. What is Functional Interface?
-    *   An interface that contains only one abstract method is known as functional interface. It can have any number of default and static methods
+    *   An interface that contains only one abstract method is known as functional interface. It can have
+    *   any number of default and static methods
     * 3. Can you tell few functional interface which is already there before Java 8?
     *   Runnable, Callable, Comparator (interviewer might ask about the equals() method inside comparator)
     * 4.
@@ -17,6 +18,10 @@ public class QAMain {
     *   Yes we can, but it will not as functional interface as it have multiple abstract methods
     * 6. What are all functional interface introduced in java 8?
     *  - Function, Predicate, Consumer, Supplier
+    * 7. What is lambda expression?
+    *   Lambda express instances of functional interfaces as it provides a clear and concise way to
+    *   represent method of a function using an expression.
+    *
     * */
     public static void main(String[] args) {
 
