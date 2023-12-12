@@ -1,0 +1,57 @@
+Consider an "Order" table with the following columns: order_id, customer_id, order_date, order_amount.
+"Customer" table with the following columns: customer_id, customer_name, is_active, create_date
+Write SQL queries to perform the following tasks:
+
+Retrieve all orders from the Order table.
+Expected result: ORDER_ID, ORDER_DATE, ORDER_AMOUNT
+
+SELECT ORDER_ID, ORDER_DATE, ORDER_AMOUNT
+FROM Order;
+
+Retrieve orders placed by a specific customer (customer id 1000).
+Expected result: CUSTOMER_NAME, ORDER_ID, ORDER_DATE, ORDER_AMOUNT
+
+SELECT C.CUSTOMER_NAME, O.ORDER_ID, O.ORDER_DATE, 0.ORDER_AMOUNT
+FROM Order O
+JOIN Customer C ON O.Customer_ID = C.Customer_ID
+WHERE O+.Customer_ID = 1000
+
+Retrieve orders placed in the last month (date must not be hard coded) by active customers.
+expected result:ORDER_ID, ORDER_DATE
+
+SELECT ORDER_ID, ORDER_DATE
+FROM Order
+WHERE ORDER_DATE >= DATEADD(MONTH, -1, GETDATE())
+AND ORDER_DATE <= GETDATE()
+AND CUSTOMER_ID IN (SELECT CUSTOMER_ID FROM Customer WHERE IS_ACTIVE = 1);
+
+Retrieve the total amount spent on all orders by each active customer.
+expected result: CUSTOMER_NAME, TOTAL AMOUNT
+
+SELECT C.CUSTOMER_NAME, SUM(O.ORDER_AMOUNT) AS TOTAL_AMOUNT
+FROM Order O
+JOIN Customer C ON O.CUSTOMER_ID = C.CUSTOMER_ID
+WHERE C.IS_ACTIVE = 1
+GROUP BY C.CUSTOMER_NAME;
+
+Retrieve the name of the customer who has spent the highest total amount of order.
+expected result: CUSTOMER_NAME, TOTAL AMOUNT
+
+SELECT TOP 1 C.CUSTOMER_NAME, SUM(O.ORDER_AMOUNT) AS TOTAL_AMOUNT
+FROM Order O
+JOIN Customer C ON O.CUSTOMER_ID = C.CUSTOMER_ID
+GROUP BY C.CUSTOMER_NAME
+GROUP BY TOTAL_AMOUNT DESC;
+
+Retrieve the total number of orders placed each year.
+expected result: YEAR, ORDER_COUNT
+
+SELECT YEAR(O.ORDER_DATE) AS YEAR, COUNT(*) AS ORDER_COUNT
+FROM Order O
+GROUP BY YEAR(O.ORDER_DATE);
+
+Remove all the customers who were created last year and whose customer_id starts with 'X'.
+
+DELETE FROM Customer
+WHERE YEAR(CREATE_DATE) = YEAR(GETDATE()) - 1
+AND CUSTOMER_ID LIKE 'X%';

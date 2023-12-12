@@ -21,7 +21,7 @@ public class MyRunnableMain {
         Thread thread4 = new Thread(myRunnable4);
 
         // The start() method is used to begin the execution of a thread. The start() internally calls the run() which houses the task to be executed
-        // Threads run independently of one another. They print at random because its the operating system that schedule the threads.
+        // Threads run independently of one another. They print at random because it's the operating system that schedule the threads.
         // Synchronizing threads -
         // Practical usage of threads is for Network/Server-side programming
         thread1.start();
