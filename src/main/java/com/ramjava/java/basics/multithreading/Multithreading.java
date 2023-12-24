@@ -12,7 +12,7 @@ public class Multithreading {
         */
         // 5 threads running at the same time
         for (int i = 0; i <= 3; i++) {
-            MultithreadThing myThing = new MultithreadThing();
+            var myThing = new MultithreadThing();
             myThing.start();
         }
         //throw new RuntimeException();
