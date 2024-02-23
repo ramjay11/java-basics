@@ -1,0 +1,12 @@
+The Java program contains a class named Solution with a method solution(String T). This method takes a string T as input, which represents a patient’s body temperature in Celsius. It then converts this string to a double and checks which range the temperature falls into. Depending on the range, it returns the corresponding body temperature state:
+
+If the temperature is below 35.0°C, it returns “hypothermia”.
+If the temperature is at least 35.0°C and at most 37.5°C, it returns “normal”.
+If the temperature is above 37.5°C and at most 40.0°C, it returns “fever”.
+If the temperature is above 40.0°C, it returns “hyperpyrexia”.
+In the main method, I created an instance of the Solution class and call the solution method with different test inputs. The output of each test is printed to the console.
+
+"34.5"
+"35.0"
+"37.6"
+"41.0"
