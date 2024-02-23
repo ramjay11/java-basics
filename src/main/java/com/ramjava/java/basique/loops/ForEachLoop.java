@@ -8,7 +8,13 @@ public class ForEachLoop {
     public static void main(String[] args) {
         // Example with an array
         int arr[] = {10, 11, 12, 13, 14, 15};
-        System.out.println("Array elements are:");
+        System.out.println("Array elements are using traditional indexed for loop:");
+        for (int i = 0; i < arr.length; i++) {
+            int ele = arr[i];
+            System.out.println(ele);
+        }
+        System.out.println("-----------");
+        System.out.println("Array elements are using enhanced for loop:");
         for (int ele : arr) {
             System.out.println(ele);
         }
@@ -17,6 +23,12 @@ public class ForEachLoop {
         fruits.add("Apple");
         fruits.add("Banana");
         fruits.add("Orange");
+        System.out.println("\nIterating over a collection using a traditional for loop:");
+        for (int i = 0; i < fruits.size(); i++) {
+            String fruit = fruits.get(i);
+            System.out.println(fruit);
+        }
+        System.out.println("-----------");
         System.out.println("\nIterating over a collection");
         for (String fruit : fruits) {
             System.out.println(fruit);
@@ -38,5 +50,12 @@ public class ForEachLoop {
         // Iterate over the values using forEach
         System.out.println("Iterating over values using forEach:");
         eras.values().forEach(value -> System.out.println(value));
+        System.out.println("------------");
+        eras.values().forEach(System.out::println);
+        System.out.println("------------");
+        // Iterate over the key-value pairs using forEach
+        System.out.println("Iterating over keys and values using forEach:");
+        eras.forEach((key, value) -> System.out.println(key + ": " + value));
+
     }
 }
