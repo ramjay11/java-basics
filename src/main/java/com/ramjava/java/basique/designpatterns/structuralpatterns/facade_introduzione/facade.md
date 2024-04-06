@@ -8,4 +8,4 @@ A Facade is not just only able to simplify an interface, but it also decouples a
 of Least Knowledge, which avoids tight coupling between the client and the subsystem. This provides flexibility: suppose in the
 above problem, the company wants to add some more steps to start or stop the Schedule Server, that have their own different
 interfaces. If you coded your client code to the facade rather than the subsystem, your client code doesn’t need to be change, just
-the facade required to be changed, that’s would be delivered with a new version to the client.
+the facade required to be changed, that would be delivered with a new version to the client.
