@@ -10,6 +10,8 @@ public class BubbleSort {
             System.out.print(num + " ");
         }
 
+        // Bubble Sort
+        /*
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size-1; j++) {
                 // Swapping 2 numbers
@@ -19,6 +21,16 @@ public class BubbleSort {
                     nums[j + 1] = temp;
                 }
             }
+            System.out.println();
+            for (int num :  nums) {
+                System.out.print(num + " ");
+            }
+        }
+         */
+
+        // Selected Sort
+        for (int i = 0; i < size -1; i++) {
+
         }
 
         System.out.println();
