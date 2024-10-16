@@ -7,7 +7,6 @@ public class Fibonazi1 {
         System.out.println(fibonazi(6));
     }
 
-
     public static int fibonazi(int n) {
         // Double base case
         if (n == 0) {
